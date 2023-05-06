@@ -102,9 +102,13 @@ header {
 }
 .input-group input {
     background-color: rgba(0, 0, 0, 0);
-    border-radius: 10px;
+    border-radius: 50px;
     padding: 10px;
     border-color: #43281c;
+    width: 100%;
+}
+#ccv-number {
+    width: 50%;
 }
 .input-group label {
     position: absolute;
@@ -137,7 +141,9 @@ header {
     max-width: 500px;
     margin-bottom: 20px;
 }
-
+tr td {
+    padding: 10px;
+}
 tr td:last-child {
     text-align: right;
 }
@@ -148,7 +154,7 @@ table tr:last-child {
 .checkout {
     width: 100%;
     background-color: #deb993;
-    border-radius: 10px;
+    border-radius: 50px;
     padding: 10px 30px;
     border-color: rgba(0, 0, 0, 0);
     font-weight: bold;

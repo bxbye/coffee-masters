@@ -1,0 +1,168 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #43281c;
+    color: #fbf2c0;
+    
+}
+.brand {
+    font-weight: 600;
+}
+.logo {
+    height: 25px;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "items payment"
+    "total total"
+    ;
+    row-gap: 30px;
+    column-gap: 30px;
+    padding: 30px;
+}
+
+.box-title {
+    color: #43281c;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.items {
+    grid-area: items;
+}
+.ordered-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.item {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "quantity title price"
+    "quantity options price"
+    ;
+    row-gap: 8px;
+    border-bottom: 2px solid #DDB892;
+    padding: 10px 0;
+}
+.item:last-child {
+    border-bottom: none;
+}
+
+.item .name {
+    font-weight: bold;
+}
+.item .price {
+    font-weight: bold;
+}
+
+.quantity {
+    grid-area: quantity;
+}
+.name {
+    grid-area: title;
+}
+.price {
+    grid-area: price;
+}
+.options {
+    grid-area: options;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.payment {
+    grid-area: payment;
+}
+.total {
+    grid-area: total;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+.input-group input {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    border-color: #43281c;
+}
+.input-group label {
+    position: absolute;
+    top: -7px;
+    left: 15px;
+    padding: 0 4px;
+    font-size: 12px;
+    background-color: #eee1d5;
+}
+
+.box {
+    background-color: #eee1d5;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.box.card-info {
+    margin-top: 20px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total table {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+tr td:last-child {
+    text-align: right;
+}
+table tr:last-child {
+    font-weight: 600;
+}
+
+.checkout {
+    width: 100%;
+    background-color: #deb993;
+    border-radius: 10px;
+    padding: 10px 30px;
+    border-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "items" "payment" "total"
+    ;
+    row-gap: 30px;
+    column-gap: 30px;
+    padding: 30px;
+}
+}
